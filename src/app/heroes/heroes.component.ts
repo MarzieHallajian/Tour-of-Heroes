@@ -17,18 +17,18 @@ export class HeroesComponent implements OnInit {
   }
   heroes: Hero[] = [];
  // heroes = HEROES;
-  selectedHero?: Hero;
+  // selectedHero?: Hero;
   
   getHeroes() : void{ //get heroes from service
   //  this.heroes = this.heroService.getHeroes();  //without observabe
     this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes);
   // The subscribe() method passes the emitted array to the callback, which sets the component's heroes property.
   }
-  onSelect(hero : Hero): void{
-    this.selectedHero = hero;
-    this.messageService.add(`HeroesComponent: Selected hero id = ${hero.id}`);
+  // onSelect(hero : Hero): void{
+  //   this.selectedHero = hero;
+  //   this.messageService.add(`HeroesComponent: Selected hero id = ${hero.id}`);
     
-  }
+  // }
 
 
   //  hero : Hero = {
